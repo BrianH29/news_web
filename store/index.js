@@ -7,7 +7,11 @@ Vue.use(Vuex);
 
 export const store = new Vuex.Store({
   state : {
-    news : [],
+    newsList : [],
+    newestList : [],
+    askList: [],
+    showList : [],
+    jobsList : [],
   },
   actions,
   mutations

@@ -6,24 +6,24 @@ export default {
       .then(response => context.commit('SET_NEWS', response.data))
       .catch(err => console.log(err)); 
   },
-  FETCH_NEWEST(){
+  FETCH_NEWEST({ commit }){
     fetchNewest()
-      .then(({ data }) => console.log(data))
+      .then(({ data }) => commit('SET_NEWEST',data))
       .catch(err => console.log(err));
   },
-  FETCH_ASK(){
+  FETCH_ASK({ commit }){
     fetchAsk()
-      .then(({data}) => console.log(data))
+      .then(({data}) => commit('SET_ASK', data))
       .catch(err => console.log(err));
   },
-  FETCH_SHOW(){
+  FETCH_SHOW({ commit }){
     fetchShow()
-      .then(({data}) => console.log(data))
+      .then(({data}) => commit('FETCH_SHOW',data))
       .catch(err => console.log(err))
   },
-  FETCH_JOBS(){
+  FETCH_JOBS({ commit }){
     fetchJobs()
-      .then(({data}) => console.log(data))
+      .then(({data}) => commit('FETCH_JOBS', data))
       .catch(err => console.log(err));
   }
 }
