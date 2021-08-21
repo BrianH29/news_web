@@ -10,11 +10,11 @@
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
-          <b-nav-item href="#">News</b-nav-item>
-          <b-nav-item href="#">Newest</b-nav-item>
-          <b-nav-item href="#">Ask</b-nav-item>
-          <b-nav-item href="#">Show</b-nav-item>
-          <b-nav-item href="#">Jobs</b-nav-item>
+          <b-nav-item href="/news">News</b-nav-item>
+          <b-nav-item href="/newest">Newest</b-nav-item>
+          <b-nav-item href="/ask">Ask</b-nav-item>
+          <b-nav-item href="/show">Show</b-nav-item>
+          <b-nav-item href="/jobs">Jobs</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
 
