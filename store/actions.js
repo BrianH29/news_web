@@ -18,12 +18,12 @@ export default {
   },
   FETCH_SHOW({ commit }){
     fetchShow()
-      .then(({data}) => commit('FETCH_SHOW',data))
+      .then(({ data }) => commit('SET_SHOW',data))
       .catch(err => console.log(err))
   },
   FETCH_JOBS({ commit }){
     fetchJobs()
-      .then(({data}) => commit('FETCH_JOBS', data))
+      .then(({data}) => commit('SET_JOBS', data))
       .catch(err => console.log(err));
   }
 }

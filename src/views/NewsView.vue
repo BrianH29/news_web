@@ -2,9 +2,7 @@
   <div>
     <ol>
       <li v-for="news in news" :key="news.id">
-        <!-- <div>{{ news.title }}</div>
-        <span>{{ news.points }} points</span>
-        <span> by {{ news.user }} </span> -->
+
         <div> {{ news.title}} </div>
         <div>
           <span>{{ news.points }} points</span>
