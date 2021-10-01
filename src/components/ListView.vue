@@ -24,16 +24,12 @@ export default {
       switch(name){
         case 'news' :
           return this.$store.state.newsList;
-        
         case 'newest' :
           return this.$store.state.newestList;
-        
         case 'ask' :
           return this.$store.state.askList;
-        
         case 'show' :
           return this.$store.state.showList;
-        
         case 'jobs' :
           return this.$store.state.jobsList;
       }

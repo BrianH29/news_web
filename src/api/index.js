@@ -1,27 +1,28 @@
 import axios from 'axios';
 
-const baseURL = 'https://api.hnpwa.com/v0';
+const instance = axios.create({
+  baseURL : process.env.VUE_APP_API_URL, 
+})
 
 function fetchNewsList(){
-  return axios.get(`${baseURL}/news/1.json`);
+  return instance.get('news/1.json');
 }
 
 function fetchNewest(){
-  return axios.get(`${baseURL}/newest/1.json`);
+  return instance.get('/newest/1.json');
 }
 
 function fetchAsk(){
-  return axios.get(`${baseURL}/ask/1.json`);
+  return instance.get('/ask/1.json');
 }
 
 function fetchShow(){
-  return axios.get(`${baseURL}/show/1.json`);
+  return instance.get('/show/1.json');
 }
 
 function fetchJobs(){
-  return axios.get(`${baseURL}/jobs/1.json`);
+  return instance.get('/jobs/1.json');
 }
-
 
 export { 
   fetchNewsList,

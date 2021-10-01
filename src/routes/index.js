@@ -1,10 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import NewsView from '../views/NewsView'
-import AskView from '../views/AskView'
-import JobsView from '../views/JobsView'
-import NewestView from '../views/NewestView'
-import ShowView from '../views/ShowView'
+import AskView from '@/views/AskView'
+import JobsView from '@/views/JobsView'
+import NewestView from '@/views/NewestView'
+import ShowView from '@/views/ShowView'
 
 
 Vue.use(VueRouter); 
@@ -19,27 +18,27 @@ export const router = new VueRouter({
     {
       path:'/news',
       name: 'news',
-      component : NewsView
+      component: () => import ('@/views/NewsView')
     },
     {
       path:'/ask',
       name: 'ask',
-      component : AskView
+      component : () => import('@/views/AskView')
     },
     {
       path:'/jobs',
       name: 'jobs',
-      component : JobsView
+      component : () => import('@/views/JobsView')
     },
     {
       path:'/newest',
       name : 'newest',
-      component : NewestView
+      component : () => import('@/views/NewestView')
     },
     {
       path:'/show',
       name: 'show',
-      component : ShowView
+      component : () => import('@/views/ShowView')
     },
 
   ]
